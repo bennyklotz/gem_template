@@ -1,0 +1,3 @@
+lib/gem_template.rb
+lib/gem_template/zombie.rb
+lib/gem_template/version.rb
