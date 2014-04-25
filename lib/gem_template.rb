@@ -8,7 +8,7 @@ require 'json'
 module GemTemplate
   # Your code goes here...
   # hmmm bundler says so, but i say your "helper" methods which are gem wide (used in tests & lib files) should go here
-  # usage GemTemplate.root -> 
+  # or if your gem code is really small..
   class << self
     # Method to return Gem Root Dir
     # @return [String] Gem Root Folder
