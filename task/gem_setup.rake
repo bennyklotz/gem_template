@@ -2,6 +2,7 @@ desc 'Setup your gem -> rake gem_setup["mygemname"]'
 task :gem_setup, [:file_name, :module_name] do |t, args|
   setup_files(args[:file_name])
   setup_file_contents(args[:file_name], args[:module_name])
+  system("rm task/gem_setup.rake")
 end
 
 def setup_files(name)
@@ -13,7 +14,7 @@ def setup_files(name)
 end
 
 def setup_file_contents(file_name, module_name)
-  ["{lib,test}/**/*.rb", '*.gemspec'].each do |path|
+  ["{lib,test}/**/*.rb", '*.gemspec', 'Rakefile'].each do |path|
     Dir.glob(path).each do |file|
       puts "Updating file: #{file}"
       content = File.read(file)
