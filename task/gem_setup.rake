@@ -21,11 +21,10 @@ def setup_file_contents(file_name, module_name)
     File.open(file, 'w') { |file| file.puts(content) }
   end
 
-  Dir.glob("./*.gemspec").each do |file|
-    content = File.read(file)
-    content.gsub!('gem_template', file_name)
-    content.gsub!('GemTemplate', module_name)
+  content = File.read("#{file_name}.gemspec")
+  puts content
+  content.gsub!('gem_template', file_name)
+  content.gsub!('GemTemplate', module_name)
 
-    File.open(file, 'w') { |file| file.puts(content) }
-  end
+  File.open(file, 'w') { |file| file.puts(content) }
 end
