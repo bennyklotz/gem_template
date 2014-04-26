@@ -13,7 +13,7 @@ def setup_files(name)
 end
 
 def setup_file_contents(file_name, module_name)
-  Dir.glob("{lib,test,}/**/*.rb").each do |file|
+  Dir.glob("{lib,test}/**/*.rb").each do |file|
     puts "Updating file: #{file}"
     content = File.read(file)
     content.gsub!('gem_template', file_name)
