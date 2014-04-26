@@ -43,6 +43,21 @@ Maybe no Rakefile? Testfiles? or just some files which should be checked into Gi
 
 You can also sync git files with your rubygem files with ```rake manifest```
 
+### TODO
 
+Handle gem setup if gem name has pattern rack-my_gem
 
+This would mean a gem with following lib structure (also reflects test/spec folder structure):
+  - lib/
+  -- lib/rack/
+  --- lib/rack/my_gem/
+  --- lib/rack/my_gem.rb
+
+And following module structure, eg. in file ```lib/rack/my_gem.rb```:
+```ruby
+module Rack
+  module MyGem
+  end
+end
+```
 
