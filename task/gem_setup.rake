@@ -2,7 +2,7 @@ desc 'Setup your gem -> rake gem_setup["mygemname"]'
 task :gem_setup, [:file_name, :module_name] do |t, args|
   setup_files(args[:file_name])
   setup_file_contents(args[:file_name], args[:module_name])
-  system("rm task/gem_setup.rake")
+  clearup 
 end
 
 def setup_files(name)
@@ -24,4 +24,11 @@ def setup_file_contents(file_name, module_name)
       File.open(file, 'w') { |file| file.puts(content) }
     end
   end
+end
+
+def clearup
+  system("rm task/gem_setup.rake")
+  system("rm -rf .git/")
+  system("rm README.md")
+  system("touch README.md")
 end
