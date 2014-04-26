@@ -14,17 +14,11 @@ end
 
 def setup_file_contents(file_name, module_name)
   Dir.glob("{lib,test,}/**/*.rb").each do |file|
+    puts "Updating file: #{file}"
     content = File.read(file)
     content.gsub!('gem_template', file_name)
     content.gsub!('GemTemplate', module_name)
 
     File.open(file, 'w') { |file| file.puts(content) }
   end
-
-  content = File.read("#{file_name}.gemspec")
-  puts content
-  content.gsub!('gem_template', file_name)
-  content.gsub!('GemTemplate', module_name)
-
-  File.open(file, 'w') { |file| file.puts(content) }
 end
