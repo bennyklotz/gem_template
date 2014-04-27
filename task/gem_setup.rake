@@ -1,8 +1,13 @@
 desc 'Setup your gem -> rake gem_setup["mygemname"]'
-task :gem_setup, [:file_name, :module_name] do |t, args|
-  setup_files(args[:file_name])
-  setup_file_contents(args[:file_name], args[:module_name])
-  clearup 
+task :gem_setup  do |t, args|
+  puts 'Specify file names'
+  file_name = gets
+  puts 'Specify module name'
+  module_name = gets
+
+  setup_files(file_name)
+  setup_file_contents(file_name, module_name)
+  clearup
 end
 
 def setup_files(name)
