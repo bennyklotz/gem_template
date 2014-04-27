@@ -1,9 +1,9 @@
 desc 'Setup your gem -> rake gem_setup["mygemname"]'
 task :gem_setup  do |t, args|
   puts 'Specify file names'
-  file_name = gets
+  file_name = STDIN.gets
   puts 'Specify module name'
-  module_name = gets
+  module_name = STDIN.gets
 
   setup_files(file_name)
   setup_file_contents(file_name, module_name)
