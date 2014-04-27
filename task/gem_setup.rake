@@ -5,9 +5,9 @@ task :gem_setup  do |t, args|
   puts 'Specify module name'
   module_name = STDIN.gets
 
-  setup_files(file_name.dup)
-  setup_file_contents(file_name.dup, module_name.dup)
-  clearup
+  setup_files(file_name)
+  setup_file_contents(file_name, module_name)
+  # clearup
 end
 
 def setup_files(name)
