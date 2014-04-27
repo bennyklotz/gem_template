@@ -23,7 +23,7 @@ def setup_files(name)
 end
 
 def setup_file_contents(file_name, module_name)
-  ["{lib,test}/**/*.rb", '*.gemspec', "Rakefile", "Gemfile"].each do |path|
+  ["{lib,test}/**/*.rb", '*.gemspec', "Rakefile", "Gemfile", "task/console.rake"].each do |path|
     Dir.glob(path).each do |file|
       puts "Updating file: #{file}"
       content = File.read(file)
