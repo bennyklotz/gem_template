@@ -19,7 +19,7 @@ def setup_files(name)
 end
 
 def setup_file_contents(file_name, module_name)
-  ["{lib,test}/**/*.rb", '*.gemspec', "Rakefile", "Gemfile", "MANIFEST"].each do |path|
+  ["{lib,test}/**/*.rb", '*.gemspec', "Rakefile", "Gemfile"].each do |path|
     Dir.glob(path).each do |file|
       puts "Updating file: #{file}"
       content = File.read(file)
@@ -36,4 +36,6 @@ def clearup
   system("rm -rf .git/")
   system("rm README.md")
   system("touch README.md")
+  system("rm MANIFEST")
+  system("touch MANIFEST")
 end
