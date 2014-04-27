@@ -1,6 +1,6 @@
 desc 'Setup your gem -> rake gem_setup["mygemname"]'
 task :gem_setup  do |t, args|
-  puts 'Specify file names'
+  puts 'Specify gem name'
   file_name = STDIN.gets.chomp
   if file_name.include?('-')
     puts 'Not supported yet...'
