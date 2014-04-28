@@ -19,8 +19,6 @@ Choose your testing framework easily, you just have to switch branches.
 - minitest_spec branch -> MiniTest::Spec
 - rspec branch -> Rspec
 
-NOTE: Only MiniTest::TestUnit supported for now (master branch)
-
 ### Setup your gem
 
 Everything which is named GemTemplate or gem_template (Modules, Files, Folder) should be changed to your gem's name.
