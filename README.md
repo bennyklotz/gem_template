@@ -25,7 +25,9 @@ NOTE: Only MiniTest::TestUnit supported for now (master branch)
 
 Everything which is named GemTemplate or gem_template (Modules, Files, Folder) should be changed to your gem's name.
 
-To change your files type in ```rake gem_setup[my_gem,MyGem]```
+To change your files type in ```rake gem_setup```
+
+Now you have to input your new Gem Name and Gem Module Name (eg.: my_gem, MyGem)
 
 This should setup your whole new gem:
   - Change file names
