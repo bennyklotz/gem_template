@@ -7,7 +7,7 @@ task :manifest do
     'LICENSE.txt',
     'MANIFEST',
     '*.gemspec',
-    'README.rdoc'
+    'README.md'
   )
 
   files  = FILE_LIST.to_a.sort
