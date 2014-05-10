@@ -23,7 +23,10 @@ end if ENV['COVERAGE']
 # Include your test dependencies here
 require 'minitest/autorun'
 require 'minitest/mock'
-require 'minitest/pride' # for colored output
+require 'minitest/reporters'
+
+MiniTest::Reporters.use! MiniTest::Reporters::SpecReporter.new
+
 # require 'rack/test'
 # require 'json'
 
