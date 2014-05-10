@@ -4,6 +4,12 @@ This repo is intended as a Gem Template.
 
 Just clone the repo and change the essential parts and you can start with your own gem.
 
+Clone it like this:
+
+  $ git clone git@github.com:innsbruck-rb/gem_template.git my_gem
+
+'my_gem' will be your gem name
+
 ## Essential changes:
 ### Testing Framework:
 
@@ -33,7 +39,7 @@ This should setup your whole new gem:
   - Clears README
   - Deletes .git folder
 
-The only thing you have to do by hand, is to move ```gem_template``` folder to your proper gem folder
+The only thing you have to do by hand, is to move ```gem_template``` folder to your proper gem folder if you didn't clone the repo as your gem name.
 
 ### Manifest File
 
