@@ -38,6 +38,8 @@ end
 def clearup
   system("rm task/gem_setup.rake")
   system("rm -rf .git/")
+  system("rm README.md")
+  system("mv README.md.new README.md")
   system("rm MANIFEST")
   system("touch MANIFEST")
 end
