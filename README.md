@@ -6,7 +6,9 @@ Just clone the repo and change the essential parts and you can start with your o
 
 Clone it like this:
 
+```bash
   $ git clone git@github.com:innsbruck-rb/gem_template.git my_gem
+```
 
 'my_gem' will be your gem name
 
