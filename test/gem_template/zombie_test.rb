@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module GemTemplate
-  class ZombieTest < MiniTest::Unit::TestCase
+  class ZombieTest < Minitest::Test
     def setup
       # runs before each test
       @zombie = Zombie.new
