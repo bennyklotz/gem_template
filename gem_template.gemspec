@@ -21,10 +21,12 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '>= 1.8.7' # Specify your required ruby version here
 
-  spec.add_runtime_dependency 'sinatra', '~> 1.4' # Specify your runtime & development dependencies here
+  # spec.add_runtime_dependency 'sinatra', '~> 1.4' # Specify your runtime & development dependencies here
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
   spec.add_development_dependency 'minitest'
+  spec.add_development_dependency 'coveralls'
+  spec.add_development_dependency 'simplecov'
   spec.add_development_dependency 'minitest-reporters'
 end
