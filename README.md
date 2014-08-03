@@ -23,8 +23,8 @@ Choose your testing framework easily, you just have to switch branches.
 
 #### Testing Branches:
 
-- master branch -> MiniTest::TestUnit
-- minitest_spec branch -> MiniTest::Spec
+- master branch -> Minitest::Test
+- minitest_spec branch -> Minitest::Spec
 - rspec branch -> Rspec
 
 ### Setup your gem
