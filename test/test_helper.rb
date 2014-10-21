@@ -1,24 +1,22 @@
 # Set proper RACK_ENV if gem is a rack app/middleware
 # ENV['RACK_ENV'] = 'test'
 
-# simplecov & coveralls for code coverage
-require 'simplecov'
-require 'coveralls'
+if ENV['COVERAGE']
+  require 'simplecov'
+  require 'coveralls'
 
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-  SimpleCov::Formatter::HTMLFormatter,
-  Coveralls::SimpleCov::Formatter
-]
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+    SimpleCov::Formatter::HTMLFormatter,
+    Coveralls::SimpleCov::Formatter
+  ]
 
-SimpleCov.start do
-  project_name 'rack-simple_auth'
-  add_filter '/test/'
-  add_filter '/pkg/'
-  add_filter '/spec/'
-  add_filter '/features/'
-  add_filter '/doc/'
-end if ENV['COVERAGE']
-# only run coverage if ENV['COVERAGE'] is defined
+  SimpleCov.start do
+    project_name 'gem_template'
+    # add_filter '/test/'
+    # add_filter '/doc/'
+    # Add filters where coverage wont be affected
+  end
+end
 
 # Include your test dependencies here
 require 'minitest/autorun'
