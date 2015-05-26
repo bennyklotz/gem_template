@@ -13,19 +13,6 @@ Clone it like this:
 'my_gem' will be your gem name
 
 ## Essential changes:
-### Testing Framework:
-
-This template supports different Testing Frameworks
-
-Before you remove the old .git folder to setup a new git repo for your new gem decide which Testing framework to use.
-
-Choose your testing framework easily, you just have to switch branches.
-
-#### Testing Branches:
-
-- master branch -> Minitest::Test
-- minitest_spec branch -> Minitest::Spec
-- rspec branch -> Rspec
 
 ### Setup your gem
 
