@@ -3,11 +3,9 @@
 
 if ENV['COVERAGE']
   require 'simplecov'
-  require 'coveralls'
 
   SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-    SimpleCov::Formatter::HTMLFormatter,
-    Coveralls::SimpleCov::Formatter
+    SimpleCov::Formatter::HTMLFormatter
   ]
 
   SimpleCov.start do
@@ -24,7 +22,7 @@ require 'minitest/reporters'
 require 'minitest/mock'
 
 Minitest::Reporters.use!(
-  Minitest::Reporters::SpecReporter.new,
+  Minitest::Reporters::DefaultReporter.new,
   ENV,
   Minitest.backtrace_filter
 )
